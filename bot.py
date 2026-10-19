@@ -131,8 +131,7 @@ async def launch_browser(pw, headless):
         args=args,
         ignore_default_args=["--enable-automation"],
         viewport={"width": 1280, "height": 800},
-        locale="ru-RU",
-        executable_path="/usr/bin/chromium",
+        locale="ru-RU"
     )
     try:
         return await pw.chromium.launch_persistent_context(channel="chrome", **kwargs)
