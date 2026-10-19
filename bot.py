@@ -78,7 +78,7 @@ WAIT_PAT = re.compile(r"пока организатор|организатор �
 DENIED_PAT = re.compile(r"отклонил|отказано|не можете присоединиться|You can.t join|denied|"
                         r"відхилив|відмовлено", re.I)
 
-client = TelegramClient(SESSION_NAME, API_ID, API_HASH)
+client = TelegramClient('anon', API_ID, API_HASH)
 PW = None
 ctx = None
 report_chat = None
