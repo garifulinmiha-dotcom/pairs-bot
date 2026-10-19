@@ -12,6 +12,7 @@ class SimpleHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(b"User script is running!")
 
 def run_server():
+    socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(("", PORT), SimpleHandler) as httpd:
         httpd.serve_forever()
 
